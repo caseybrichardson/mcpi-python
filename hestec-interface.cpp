@@ -109,7 +109,7 @@ vector<string> tokenizeCommand(string &input)
 
 bool isCommand(string &command)
 {
-	string commands[] = {"maze", "magic", "mazeGame", "movePlayer", "cristallBall", "minheap", "exit"};
+	string commands[] = {"maze", "magic", "mazeGame", "movePlayer", "crystalBall", "minheap", "delete", "chainPlayer", "jail", ""};
 
 	for(int i = 0; i < 7; i++)
 	{
@@ -172,12 +172,12 @@ int main(int argc, char **argv)
 			{
 				if(commandExists(command[0]))
 				{
-					//system(("python " + command[0] + ".py " + buildParamString(command)).c_str());
+					system(("python " + command[0] + ".py " + buildParamString(command)).c_str());
 					cout << ("python " + command[0] + ".py " + buildParamString(command)) << endl;
 				}
 				else
 				{
-					cout << "Command \'" << command[0] << "\' is not yet implemented!" << endl;
+					cout << "Command \'" << command[0] << "\' does not exist!" << endl;
 				}
 			}
 		}
